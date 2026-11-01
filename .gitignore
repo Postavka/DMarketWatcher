@@ -1,0 +1,11 @@
+.env
+keys.txt
+.venv/
+__pycache__/
+*.db
+node_modules/
+*.egg-info/
+.pytest_cache/
+data/
+dist/
+.vite/

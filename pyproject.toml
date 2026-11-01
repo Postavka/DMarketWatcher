@@ -1,0 +1,32 @@
+[project]
+name = "dmarket-watcher"
+version = "0.1.0"
+description = "Read-only DMarket CS2 skin watcher with Telegram alerts"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.27",
+    "pynacl>=1.5",
+    "truststore>=0.9",
+    "sqlalchemy>=2.0",
+    "pillow>=13.0",
+    "anthropic>=2.3",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["backend"]
+testpaths = ["backend/tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 100
+src = ["backend"]
